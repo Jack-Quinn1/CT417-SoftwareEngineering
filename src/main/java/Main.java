@@ -9,10 +9,9 @@ public class Main {
         Student s3 = new Student("Jordan Flanagan", "11/04/2001", 21, 19362455);
 
         Lecturer l1 = new Lecturer("Des Chambers", "06/03/1965", 57, 54367891);
-//        Lecturer l2 = new Lecturer("Josephine Griffith", "15/07/1972", 50, 56372859);
         Lecturer l3 = new Lecturer("Frank Glavin", "03/10/1987", 35, 83929105);
 
-        s1.getUsername();
+        String a1 = s1.getUsername();
         s2.getUsername();
         s3.getUsername();
 
@@ -39,5 +38,7 @@ public class Main {
         DateTime end = new DateTime("2026-06-01");
 
         Course course = new Course("Computer Science & IT", modules, students, start, end);
+
+        System.out.println(course);
     }
 }

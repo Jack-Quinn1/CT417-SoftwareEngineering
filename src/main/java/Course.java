@@ -11,8 +11,8 @@ public class Course {
 
     public Course(String name, ArrayList modules, ArrayList students, DateTime startDate, DateTime endDate) {
         this.name = name;
-        this.modules = new ArrayList<>();
-        this.students = new ArrayList<>();
+        this.modules = modules;
+        this.students = students;
         this.startDate = startDate;
         this.endDate = endDate;
     }
@@ -55,5 +55,16 @@ public class Course {
 
     public void setEndDate(DateTime endDate) {
         this.endDate = endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "name='" + name + '\'' +
+                ", modules=" + modules +
+                ", students=" + students +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                '}';
     }
 }
