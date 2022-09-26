@@ -12,7 +12,7 @@ pipeline {
 
     post{
         success{
-        deploy(adapters:[tomcat9(url:"http://localhost:8081",credentialsId:"war-deployer",path:"/.")], war:"*/build/libs/.war",contextPath: "/.")
+        deploy(adapters:[tomcat9(url:"http://localhost:8081",credentialsId:"war-deployer",path:"/.")], war:"**/build/libs/*.war",contextPath: "/.")
         }
     }
 }
