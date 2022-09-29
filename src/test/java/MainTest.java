@@ -40,8 +40,8 @@ public class MainTest{
         Module module = new Module("Networks", "CT3531", l1, students);
         assertEquals("Networks", module.getName());
         assertEquals("CT3531", module.getId());
-        assertEquals("No students", module.getStudents());
-        assertEquals("No lecturer", module.getLecturer());
+        assertNotNull("No students", module.getStudents());
+        assertNotNull("No lecturer", module.getLecturer());
     }
 
     @Test
@@ -60,9 +60,9 @@ public class MainTest{
 
         Course course = new Course("Computer Science & IT", modules, students, start, end);
         assertEquals("Computer Science & IT", course.getName());
-        assertEquals("No Lecturer", course.getModules());
-        assertEquals("No students", course.getStudents());
-        assertEquals("No start time", course.getStartDate());
-        assertEquals("No end time", course.getEndDate());
+        assertNotNull("No Lecturer", course.getModules());
+        assertNotNull("No students", course.getStudents());
+        assertNotNull("No start time", course.getStartDate());
+        assertNotNull("No end time", course.getEndDate());
     }
 }
